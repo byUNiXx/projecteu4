@@ -1,5 +1,5 @@
-name="Extended Cambiado"
-archive="mod/extendedtimeline.zip"
+name="atleu4"
+archive="mod/atleu4.zip"
 replace_path="history/countries"
 replace_path="history/provinces"
 tags={
@@ -14,5 +14,5 @@ tags={
 	"Events"
 	"Missions And Decisions"
 }
-picture="extended_timeline.jpg"
+picture="atleu4.jpg"
 supported_version="1.24.*.*"
