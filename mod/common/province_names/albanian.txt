@@ -1,0 +1,16 @@
+#Serbia
+138  = "Mali i Zi"			#Zeta
+143  = "Lezha"				#Albania
+148  = "Maqedonisë"			#Skopje
+1766 = "Kosova"				#Kosovo
+2121 = "Nishi"				#Nis
+#Greece 
+142  = "Korfuzi"			#Corfu
+144  = "Epiri"				#Epirus
+146  = "Athina"				#Athens
+#Bulgaria  
+150  = "Ternovo"			#Tarnovo
+1765 = "Sofja"				#Sofia
+#Turkey
+149  = "Adrianopoja"			#Edirne
+151  = "Konstandinopojes"		#Constantinople

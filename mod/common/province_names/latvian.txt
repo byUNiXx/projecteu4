@@ -1,0 +1,6 @@
+#Baltics
+37   = "Vidzeme"              #Livland
+39   = "Kuldiga"              #Kurland
+273  = "Latgale"              #Latgalia
+1834 = "Tartu"                #Dorpat
+1935 = "Jelgava"              #Semigallia

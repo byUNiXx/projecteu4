@@ -1,0 +1,78 @@
+
+oil = {
+	color = { 0 0 0 }
+	modifier = {
+		naval_maintenance_modifier = -0.25
+	}
+	province = {
+		local_regiment_cost = -0.2
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+uranium = {
+	color = { 0.3 0.99 0.3 }
+	modifier = {
+		naval_maintenance_modifier = -0.25
+	}
+	province = {
+		local_production_efficiency = 0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+coal = {
+	color = { 0.1 0.1 0.1 }
+	modifier = {
+		naval_maintenance_modifier = -0.25
+	}
+	province = {
+		local_build_cost = -0.2
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+aluminum = {
+	color = { 0.6 0.6 0.6 }
+	modifier = {
+		naval_maintenance_modifier = -0.25
+	}
+	province = {
+		local_friendly_movement_speed = 0.2
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+cars = {
+	color = { 0.99 0 0 }
+	modifier = {
+		
+	}
+	province = {
+		local_development_cost = -0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+electronics = {
+	color = { 0.1 0.3 0.99 }
+	modifier = {
+		development_cost = -0.1
+	}
+	province = {
+		allowed_num_of_buildings = 1
+	}
+	chance = {
+		factor = 0
+	}
+}

@@ -1,0 +1,1146 @@
+############################################
+# Missions to circumvent Africa towards Asia
+#
+# written by Gilles Gaudray
+############################################
+
+discover_ivory_coast_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		1466 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_ivory_coast_tt
+			1466 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		1466 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = ivory_coast_trade
+			}
+		}
+	}
+}
+
+discover_good_hope_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		1466 = {
+			has_discovered = ROOT
+		}
+		1460 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_good_hope_tt
+			1460 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		1460 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = good_hope_trade
+			}
+		}
+	}
+}
+
+discover_zanzibar_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		1460 = {
+			has_discovered = ROOT
+		}
+		1448 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_zanzibar_tt
+			1448 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		1448 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = zanzibar_node_trade
+			}
+		}
+	}
+}
+
+conquer_zanzibar_mission = {
+
+	type = country
+	
+	category = MIL
+	
+	allow = {
+		normal_or_historical_nations = yes
+		num_of_ports = 3
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		1448 = { has_discovered = ROOT }
+		1201 = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+			NOT = { owned_by = ROOT }
+			owner = {
+				NOT = { is_subject_of = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { truce_with = ROOT }
+				NOT = { alliance_with = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_ports = 1 }
+			is_subject_other_than_tributary_trigger = yes
+			1201 = {
+				owner = {
+					OR = {
+						alliance_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = conquer_zanzibar_tt
+			1201 = {
+				owned_by =  ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 3
+		}
+		modifier = {
+			factor = 1.5
+			1201 = {
+				owner = { 
+					NOT = { technology_group = western } 
+				}
+			}
+		}			
+	}
+	immediate = {
+		1201 = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		1201 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		1201 = {
+			remove_claim = ROOT
+			add_territorial_core_effect = yes
+		}
+	}
+}
+
+conquer_mombasa_mission = {
+
+	type = country
+	
+	category = MIL
+	
+	allow = {
+		normal_or_historical_nations = yes
+		num_of_ports = 3
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		1448 = { has_discovered = ROOT }
+		1202 = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+			NOT = { owned_by = ROOT }
+			owner = {
+				NOT = { is_subject_of = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { truce_with = ROOT }
+				NOT = { alliance_with = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_ports = 1 }
+			is_subject_other_than_tributary_trigger = yes
+			1202 = {
+				owner = {
+					OR = {
+						alliance_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = conquer_mombasa_tt
+			1202 = {
+				owned_by =  ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 3
+		}
+		modifier = {
+			factor = 1.5
+			1202 = {
+				owner = { 
+					NOT = { technology_group = western } 
+				}
+			}
+		}			
+	}
+	immediate = {
+		1202 = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		1202 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		1202 = {
+			remove_claim = ROOT
+			add_territorial_core_effect = yes
+		}
+	}
+}
+
+conquer_mogadishiu_mission = {
+
+	type = country
+	
+	category = MIL
+	
+	allow = {
+		normal_or_historical_nations = yes
+		num_of_ports = 3
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		1448 = { has_discovered = ROOT }
+		1205 = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+			NOT = { owned_by = ROOT }
+			owner = {
+				NOT = { is_subject_of = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { truce_with = ROOT }
+				NOT = { alliance_with = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_ports = 1 }
+			is_subject_other_than_tributary_trigger = yes
+			1205 = {
+				owner = {
+					OR = {
+						alliance_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = conquer_mogadishiu_tt
+			1205 = {
+				owned_by =  ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 3
+		}
+		modifier = {
+			factor = 1.5
+			1205 = {
+				owner = { 
+					NOT = { technology_group = western } 
+				}
+			}
+		}			
+	}
+	immediate = {
+		1205 = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		1205 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		1205 = {
+			remove_claim = ROOT
+			add_territorial_core_effect = yes
+		}
+	}
+}
+
+discover_aden_gulf_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		1448 = {
+			has_discovered = ROOT
+		}
+		4346 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_aden_gulf_tt
+			4346 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		4346 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = aden_gulf_trade
+			}
+		}
+	}
+}
+
+conquer_masqat_mission = {
+
+	type = country
+	
+	category = MIL
+	
+	allow = {
+		normal_or_historical_nations = yes
+		num_of_ports = 3
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		4346 = { has_discovered = ROOT }
+		400 = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+			NOT = { owned_by = ROOT }
+			owner = {
+				NOT = { is_subject_of = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { truce_with = ROOT }
+				NOT = { alliance_with = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_ports = 1 }
+			is_subject_other_than_tributary_trigger = yes
+			400 = {
+				owner = {
+					OR = {
+						alliance_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = conquer_masqat_tt
+			400 = {
+				owned_by =  ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 3
+		}
+		modifier = {
+			factor = 1.5
+			400 = {
+				owner = { 
+					NOT = { technology_group = western } 
+				}
+			}
+		}			
+	}
+	immediate = {
+		400 = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		400 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		400 = {
+			remove_claim = ROOT
+			add_territorial_core_effect = yes
+		}
+	}
+}
+
+discover_indus_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		4346 = {
+			has_discovered = ROOT
+		}
+		504 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_indus_tt
+			504 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		504 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = indus_node_trade
+			}
+		}
+	}
+}
+
+discover_goa_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		4346 = {
+			has_discovered = ROOT
+		}
+		2030 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_goa_tt
+			2030 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		2030 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = goa_node_trade
+			}
+		}
+	}
+}
+
+discover_ceylan_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		4346 = {
+			has_discovered = ROOT
+		}
+		1340 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_ceylan_tt
+			1340 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		1340 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = ceylan_node_trade
+			}
+		}
+	}
+}
+
+discover_bengal_node = {
+
+	type = country
+
+	category = DIP
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = europe }
+		has_idea = quest_for_the_new_world
+		num_of_ports = 3
+		1340 = {
+			has_discovered = ROOT
+		}
+		1343 = {
+			range = ROOT
+			NOT = { has_discovered = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = quest_for_the_new_world }
+			NOT = { num_of_ports = 1 }
+		}
+	}
+	success = {
+		custom_trigger_tooltip = {
+			tooltip = discover_bengal_tt
+			1343 = { has_discovered = ROOT }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			full_idea_group = naval_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 1.50
+			full_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = expansion_ideas
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = vice_roys
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = shrewd_commerce_practise
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				continent = africa
+			}
+		}
+	}
+	effect = {
+		add_mercantilism = 1
+		1343 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = bengal_node_trade
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+#Serbia
+141  = "Srbija"			#Serbia
+143  = "Lež"       		#Albania
+148  = "Makedonija"		#Macedonia
+321  = "Kipar"         		#Cyprus
+1765 = "Sofija"			#Sofia
+4265 = "Valona"			#Vlore
+4266 = "Drac"			#Durres
+#Greece
+2012 = "Gjumurcina"		#Komotini
+#Turkey
+151  = "Carigrad"		#Thrace

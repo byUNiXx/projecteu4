@@ -1,0 +1,24 @@
+project_national_glory = {
+	
+	type = country
+
+	category = ADM
+	
+	allow = {
+		tag = TWN
+		exists = CHN
+	}
+	abort = {
+		
+	}
+	success = {
+		NOT = { exists = CHN }
+	}
+	chance = {
+		factor = 1000
+	}
+	effect = {
+		change_tag = CHN
+		add_prestige = 50
+	}
+}

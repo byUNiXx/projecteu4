@@ -1,0 +1,4 @@
+#Kurdish provinces
+411  = "Hewler"         #Mosul
+418  = "Amed"           #Diyarbakir
+2308 = "Cizîr"          #Cizre

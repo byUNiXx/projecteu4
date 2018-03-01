@@ -1,0 +1,232 @@
+ori_conquest_of_the_reddy_kingdom = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		owned_by = YOR
+	}
+	allow = {
+		NOT = { is_year = 1500 }
+		normal_or_historical_nations = yes
+		tag = ORI
+		dynasty = "Gajapati"
+		NOT = { has_country_modifier = kapilendras_ambition }
+		NOT = { has_country_flag = had_conquest_of_reddy_kingdom }
+		is_free_or_tributary_trigger = yes
+		NOT = { alliance_with = YOR }
+		YOR = {
+			is_neighbor_of = ROOT
+			NOT = { overlord_of = ROOT }
+			NOT = { is_subject_of = ROOT }
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 4000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = YOR value = 0 } }
+		}
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_at_war = no
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = had_conquest_of_reddy_kingdom
+		add_country_modifier = {
+			name = "kapilendras_ambition"
+			duration = 3650
+		}
+	}
+}
+
+ori_conquest_of_telingana = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_areas_list = {
+		telingana_area
+	}
+	
+	target_provinces = {
+		owner = { NOT = { alliance_with = ROOT } }
+		owner = { NOT = { is_subject_of = ROOT } }
+	}
+	allow = {
+		NOT = { is_year = 1500 }
+		normal_or_historical_nations = yes
+		tag = ORI
+		dynasty = "Gajapati"
+		owns = 2228 #Konaseema
+		NOT = { has_country_modifier = kapilendras_ambition }
+		NOT = { has_country_flag = had_conquest_of_telingana }
+		is_free_or_tributary_trigger = yes
+		telingana_area = {
+			NOT = { owned_by = ROOT }
+			owner = { NOT = { alliance_with = ROOT } }
+			owner = { NOT = { is_subject_of = ROOT } }
+			owner = { NOT = { overlord_of = ROOT } }
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 4000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_at_war = no
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = had_conquest_of_telingana
+		add_country_modifier = {
+			name = "kapilendras_ambition"
+			duration = 3650
+		}
+	}
+}
+
+ori_to_the_kaveri_river_and_beyond = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces_list = {
+		539 540 2218
+	}
+	
+	target_provinces = {
+		always = yes
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		tag = ORI
+		dynasty = "Gajapati"
+		owns = 2083 #Kosta / Udayagiri
+		NOT = { has_country_modifier = kapilendras_ambition }
+		NOT = { has_country_flag = had_to_the_kaveri_river_and_beyond }
+		is_free_or_tributary_trigger = yes
+		539 = {
+			NOT = { owned_by = ROOT }
+			owner = { NOT = { alliance_with = ROOT } }
+			owner = { NOT = { is_subject_of = ROOT } }
+		}
+		540 = {
+			NOT = { owned_by = ROOT }
+			owner = { NOT = { alliance_with = ROOT } }
+			owner = { NOT = { is_subject_of = ROOT } }
+		}
+		2218 = {
+			NOT = { owned_by = ROOT }
+			owner = { NOT = { alliance_with = ROOT } }
+			owner = { NOT = { is_subject_of = ROOT } }
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 4000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_at_war = no
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = had_conquest_of_telingana
+		add_country_modifier = {
+			name = "kapilendras_ambition"
+			duration = 3650
+		}
+	}
+}

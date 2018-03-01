@@ -1,0 +1,4 @@
+593 = "Nokor Sri Thommareach"
+612 = "Koreach"
+2382 = "Sri Nakorn Lamduan"
+

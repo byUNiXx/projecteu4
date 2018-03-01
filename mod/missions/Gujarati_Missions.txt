@@ -1,0 +1,62 @@
+conquest_of_champaner = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = GUJ
+		NOT = { has_country_modifier = "indian_ambition" }
+		NOT = { has_country_flag = conquered_champaner }
+		is_free_or_tributary_trigger = yes
+		NOT = { owns = 2202 }
+		2202 = {
+			owner = {
+				NOT = { alliance_with = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		owns = 2202
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+		modifier = {
+			factor = 5
+			exists = MLW
+		}
+	}
+	immediate = {
+		add_claim = 2202
+	}
+	abort_effect = {
+		2202 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = conquered_champaner
+		add_country_modifier = {
+			name = "indian_ambition"
+			duration = 3650
+		}
+	}
+}

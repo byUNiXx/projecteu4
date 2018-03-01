@@ -1,0 +1,101 @@
+haixi_expedition = {
+
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		is_free_or_tributary_trigger = yes
+		tag = KOR
+		NOT = { owns = 730 }
+		730 = {
+			owner = {
+				primary_culture = manchu
+				NOT = { alliance_with = ROOT }
+				war_with = ROOT
+			}
+			any_neighbor_province = {
+				owned_by = KOR
+			}
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		owns = 730
+	}
+	chance = {
+		factor = 3000
+	}
+	abort_effect = {
+	}
+	effect = {
+		730 = {
+			add_province_modifier = {
+				name = "korean_frontier"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+ninguta_expedition = {
+
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = KOR
+		NOT = { owns = 731 }
+		731 = {
+			owner = { 
+				primary_culture = manchu
+				NOT = { alliance_with = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+			any_neighbor_province = {
+				owned_by = KOR
+			}
+		}
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		owns = 731
+	}
+	chance = {
+		factor = 3000
+	}
+	immediate = {
+		add_claim = 731
+	}
+	abort_effect = {
+		731 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		731 = {
+			add_province_modifier = {
+				name = "korean_frontier"
+				duration = -1
+			}
+		}
+	}
+}
