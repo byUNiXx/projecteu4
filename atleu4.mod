@@ -14,5 +14,5 @@ tags={
 	"Events"
 	"Missions And Decisions"
 }
-picture="extended_timeline.jpg"
+picture="atleu4.jpg"
 supported_version="1.24.*.*"
