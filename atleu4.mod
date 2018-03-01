@@ -1,5 +1,5 @@
-name="Extended Cambiado"
-archive="mod/extendedtimeline.zip"
+name="Eu4 atl"
+archive="mod/atleu4.zip"
 replace_path="history/countries"
 replace_path="history/provinces"
 tags={
