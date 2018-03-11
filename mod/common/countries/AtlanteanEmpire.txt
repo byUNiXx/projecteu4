@@ -1,0 +1,96 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 11  14  95 }
+
+revolutionary_colors = { 102  102  255 }
+
+historical_idea_groups = {
+	early_adm_ideas
+	early_mil_ideas
+	early_trade_ideas
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	quantity_ideas
+	trade_ideas
+	defensive_ideas
+	humanist_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Juan Luis #1" = 70
+	"Karolus #0" = 60
+	"Karl #0" = 50
+	"Augustus #0" = 40
+	"Marcus Aurelius #0" = 30
+	"Marco Polo #0" = 20
+	"Maximilian #0" = 15
+	"Genghis #0" = 10
+	"Ragnar #0" = 5
+	"Eïnara #0" = -15
+	"Mireia #0" = -10
+	"Maria #1" = -5
+	"Blanca #0" = -10
+	"Carlota #0" = -5
+	"Monica #0" = -10
+}
+
+leader_names = {
+	"El Cid"
+	"de Atlante"
+	Campomanes 
+	Napoleón
+	Orellana
+	Fonseca
+	Ragnar
+	Lagherta
+	"Iulius Caesar"
+	"de Guzmán"
+	"de la Vega" 
+	"de Zúñiga"
+}
+
+ship_names = {
+	Magallanes
+	Colón
+	Vespucio
+	"La Niña"
+	"La Pinta"
+	"La Santa María"
+	"SS Atlantis"
+	Independence
+	Kaiser
+	Imperator
+	"SS Athens"
+	Spitfire	
+}
+
+
+army_names = {
+	"Guardia Imperial" "Ejército de $PROVINCE$" 
+}
+
+fleet_names = {
+	"Armada Imperial"	"Flota de $PROVINCE$"
+}
