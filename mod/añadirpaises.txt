@@ -1,0 +1,3 @@
+common/country_tags añadir pais al txt
+common/countries añadir un txt del pais en cuestion
+history/countries añadir txt
